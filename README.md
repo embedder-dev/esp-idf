@@ -1,5 +1,7 @@
 # Espressif IoT Development Framework
 
+**Note:** This is a test PR branch used for validating CI/CD workflows and PR automation. It is not intended for production use.
+
 * [中文版](./README_CN.md)
 
 ESP-IDF is the development framework for Espressif SoCs supported on Windows, Linux and macOS.
