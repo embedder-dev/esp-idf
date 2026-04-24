@@ -1,5 +1,7 @@
 # Espressif IoT Development Framework
 
+This is a temporary Embedder daemon test.
+
 * [中文版](./README_CN.md)
 
 ESP-IDF is the development framework for Espressif SoCs supported on Windows, Linux and macOS.
