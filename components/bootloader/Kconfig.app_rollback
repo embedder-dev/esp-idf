@@ -9,7 +9,7 @@ menu "Application Rollback"
             function should be called to confirm the operability of the app or vice versa about its non-operability.
             If the app is working, then it is marked as valid. Otherwise, it is marked as not valid and rolls back to
             the previous working app. A reboot is performed, and the app is booted before the software update.
-            Note: If during the first boot a new app the power goes out or the WDT works, then roll back will happen.
+            Note: If during the first boot of a new app the power goes out or the WDT works, then roll back will happen.
             Rollback is possible only between the apps with the same security versions.
 
     config BOOTLOADER_APP_ANTI_ROLLBACK
@@ -30,13 +30,13 @@ menu "Application Rollback"
             for storing the security version is limited (see BOOTLOADER_APP_SEC_VER_SIZE_EFUSE_FIELD option).
 
             Bootloader: When bootloader selects an app to boot, an app is selected that has
-            a security version greater or equal that recorded in eFuse field.
+            a security version greater or equal to that recorded in eFuse field.
             The app is booted with a higher (or equal) secure version.
 
             The security version is worth increasing if in previous versions there is
             a significant vulnerability and their use is not acceptable.
 
-            Your partition table should has a scheme with ota_0 + ota_1 (without factory).
+            Your partition table should have a scheme with ota_0 + ota_1 (without factory).
 
     config BOOTLOADER_APP_SEC_VER_SIZE_EFUSE_FIELD
         int "Size of the efuse secure version field"
@@ -56,7 +56,7 @@ menu "Application Rollback"
             This determines how many times the security version can be increased.
 
     config BOOTLOADER_EFUSE_SECURE_VERSION_EMULATE
-        bool "Emulate operations with efuse secure version(only test)"
+        bool "Emulate operations with efuse secure version (only test)"
         default n
         depends on BOOTLOADER_APP_ANTI_ROLLBACK
         select EFUSE_VIRTUAL
